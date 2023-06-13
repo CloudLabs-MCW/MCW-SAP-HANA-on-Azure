@@ -85,19 +85,35 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
 ### Task 1: Provision a Linux virtual machine hosting lab deployment tools
 
-1.  In the **Azure portal**, start a Bash session in **Cloud Shell**.
+1. In the **Azure Portal**, naviagte to **Resource Group**.
 
-1.  If prompted, in the **Welcome to Azure Cloud Shell** window, select **Bash (Linux)**.
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/resource.png) 
+
+1. Select **hanav2-sn-RG** resource group.
+
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/rg.png) 
+   
+1. On the overview page, copy the **Subscription ID** and **Location**, paste it in a text editor such as *Notepad*. 
+
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/copy-sub.png) 
+
+1.  Next, from the **Azure Portal**, Click on **Cloud Shell**.
+
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/img-1.png) 
+
+1.  If prompted, in the **Welcome to Azure Cloud Shell** window, select **Bash**.
 
 1.  If prompted, in the **You have no storage mounted** window, select **Create storage**.
 
-1.  In the **Bash** session in the **Cloud Shell** pane, run the following to select the Azure subscription in which you will provision the Azure resources in this lab (replace the `[subscription_ID]` placeholder with the value of the subscriptionID parameter of the Azure subscription you intend to use in this lab):
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/create-storage.png) 
+
+1.  In the **Bash** session in the **Cloud Shell** pane, run the following to select the Azure subscription in which you will provision the Azure resources in this lab (replace the `[subscription_ID]` placeholder with the value of the subscriptionID parameter you copied earlier):
 
     ```sh
     az account set --subscription '[subscription_ID]'
     ```
 
-1.  In the **Bash** session in the **Cloud Shell** pane, run the following to create an Azure resource group that will contain the Azure VM hosting the lab deployment tools (replace the `[Azure_region]` placeholder with the name of the Azure region you intend to use for all Azure resources you will deploy in this lab):
+1.  In the **Bash** session in the **Cloud Shell** pane, run the following to create an Azure resource group that will contain the Azure VM hosting the lab deployment tools (replace the `[Azure_region]` placeholder with the name of the Location you copied earlier):
 
     ```sh
     LOCATION='[Azure region]'
@@ -111,8 +127,8 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
     rm ubuntu_azurecli_vm_template.json -f
     rm ubuntu_azurecli_vm_template.parameters.json -f
 
-    wget https://raw.githubusercontent.com/microsoft/MCW-SAP-HANA-on-Azure/master/Hands-on%20lab/labfiles/sap-hana/templates/ubuntu_azurecli_vm_template.json
-    wget https://raw.githubusercontent.com/microsoft/MCW-SAP-HANA-on-Azure/master/Hands-on%20lab/labfiles/sap-hana/templates/ubuntu_azurecli_vm_template.parameters.json
+    wget https://raw.githubusercontent.com/CloudLabs-MCW/MCW-SAP-HANA-on-Azure/master/archive/Hands-on%20lab/labfiles/sap-hana/templates/ubuntu_azurecli_vm_template.json
+    wget https://raw.githubusercontent.com/CloudLabs-MCW/MCW-SAP-HANA-on-Azure/master/archive/Hands-on%20lab/labfiles/sap-hana/templates/ubuntu_azurecli_vm_template.parameters.json
     ```
 
 1.  In the **Bash** session in the **Cloud Shell** pane, run the following to provision the Azure VM that will host the lab deployment tools:
@@ -124,18 +140,20 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
     --parameters @ubuntu_azurecli_vm_template.parameters.json
     ```
 
-    > **Note**: When prompted, specify the password for the **azureadm** user that you will use to sign in to the operating system of the Azure VM.
+    > **Note**: When prompted, specify the password for the **azureadm** user enter `Password.!!1` to sign in to the operating system of the Azure VM.
 
     > **Note**: Wait until the provisioning completes. This should take about 3 minutes.
 
-1.  In the **Bash** session in the **Cloud Shell** pane, run the following to display the public IP address of the Azure VM you deployed in the previous step:
+1.  In the **Bash** session in the **Cloud Shell** pane, run the following to display the public IP address of the Azure VM you deployed in the previous step and copy the IP address:
 
     ```sh
     VMNAME=$(az vm list --resource-group $RGNAME --query '[].{Name:name}' -o tsv)
     az vm show --show-details --resource-group $RGNAME --name $VMNAME --query publicIps -o tsv
     ```
 
-1.  From your computer, start the SSH client and connect via SSH to the newly provisioned Azure VM via the public IP address you identified in the previous step. When prompted to sign in, authenticate by using the **azureadm** user account and the password you provided during provisioning.
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/ip-conf.png) 
+
+1.  From your computer, click on Putty to start the SSH client and connect via SSH to the newly provisioned Azure VM via the public IP address you identified in the previous step. When prompted to sign in, authenticate by using the **azureadm** user account and the password you provided during provisioning.
 
 1.  Within the SSH session to the Azure VM, run the following to update the package manager list of available packages and their versions (confirm when prompted whether to proceed):
 
