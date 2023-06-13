@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "SAP HANA on Azure",
+    "Language": "English",
+    "BaseURL": "https://github.com/microsoft/MCW-SAP-HANA-on-Azure/tree/master",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MCW/MCW-SAP-HANA-on-Azure/master/archive/Hands-on%20lab/HOL%20step-by-step%20-%20SAP%20HANA%20on%20Azure.md",
+        "Order": 1
+      }
+    ]
+  }
+  ]
