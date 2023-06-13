@@ -6,7 +6,7 @@
 
 2. To get the lab environment details, you can select the **Environment details** tab, you can locate the **Environment details** tab in the upper right corner. Additionally, the credentials will also be emailed to your email address provided during registration.
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/laben.png)
+   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/laben-1.png)
   
 ## Log-in to the Azure portal
 
