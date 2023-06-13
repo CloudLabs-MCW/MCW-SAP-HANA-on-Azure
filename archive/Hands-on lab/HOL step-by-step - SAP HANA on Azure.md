@@ -77,34 +77,6 @@ HANA highly-available deployment
 
 ![Solution architecture to setup SAP HANA on Azure consisting of a highly-available HANA instance.](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/clustered-hana-instance-architecture.png "highly-available HANA instance solution architecture diagram")
 
-## Requirements
-
--   A Microsoft Azure subscription
-
--   A work or school account with the Owner role in the Azure subscription and permissions to create service principals in the Azure Active Directory (Azure AD) tenant associated with the Azure subscription
-
--   An SAP-user (S-user) account with access to SAP software downloads
-
--   A lab computer with:
-
-    -   Access to Microsoft Azure
-
-    -   Access to the SAP HANA software (requires an SAP Online Service System account)
-
-    -   An SSH client such as PuTTY available from [PuTTY download page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-
-    -   A modern web browser (Microsoft Edge, Google Chrome, or Mozilla Firefox)
-
-   > **Note**: Besides an SSH client and a web browser, the lab computer does not require locally installed software.
-
-## Help references
-
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-| Automated SAP Deployments in Azure Cloud | <https://github.com/Azure/sap-hana/> |
-
-
 ## Exercise 1: Implement a single-node HANA instance by using Terraform and Ansible
 
 Duration: 120 minutes
@@ -113,9 +85,7 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
 ### Task 1: Provision a Linux virtual machine hosting lab deployment tools
 
-1.  From the lab computer, start a Web browser, navigate to the Azure portal at https://portal.azure.com and sign in with credentials you will be using in this lab.
-
-1.  In the Azure portal at <http://portal.azure.com>, start a Bash session in **Cloud Shell**.
+1.  In the **Azure portal**, start a Bash session in **Cloud Shell**.
 
 1.  If prompted, in the **Welcome to Azure Cloud Shell** window, select **Bash (Linux)**.
 
