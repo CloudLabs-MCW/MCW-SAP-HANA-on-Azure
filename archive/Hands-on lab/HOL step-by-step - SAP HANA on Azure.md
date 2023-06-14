@@ -485,7 +485,7 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
 1.  In the SSH session to the Azure VM, run the following to initiate the Terraform deployment:
 
-    ```sh
+    ```
     terraform_v2.sh apply template-sn1
     ```
 
@@ -497,9 +497,9 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
     > **Note**: If the deployment fails or does not complete within 15 minutes, terminate the deployment by pressing Ctrl+C, within the SSH session to the Azure VM you used to perform the Terraform deployment, run the following command to delete the resource group and resources created during the deployment, and then retry the deployment by re-running task 2 of this exercise.
 
-        ```sh
-        az group delete --name hanav2-sn-RG --yes
-        ```
+     ```
+      az group delete --name hanav-sn-RG --yes
+     ```
 
 ### Task 3: Deploy a single node HANA instance by using Ansible
 
@@ -561,9 +561,9 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
     > **Note**: If the deployment fails or does not complete within 75 minutes, terminate the deployment by pressing Ctrl+C, within the SSH session to the Azure VM you used to perform the Terraform deployment, run the following command to delete the resource group and resources created during the deployment, and then retry the deployment by re-running task 2 and 3 of this exercise.
 
-        ```sh
-        az group delete --name hanav2-sn-RG --yes
-        ```
+    ```sh
+    az group delete --name hanav2-sn-RG --yes
+    ```
 
 
 ### Task 4: Review the deployment of a single-node HANA instance
@@ -1102,9 +1102,9 @@ You will leverage a number of artifacts that you implemented in the first exerci
 
     > **Note**: If the deployment fails or does not complete within 15 minutes, terminate the deployment by pressing Ctrl+C, within the SSH session to the Azure VM you used to perform the Terraform deployment, run the following command to delete the resource group and resources created during the deployment, and then retry the deployment by re-running this task.
 
-        ```sh
-        az group delete --name hanav2-ha-RG --yes
-        ```
+     ```sh
+     az group delete --name hanav-ha-RG --yes
+     ```
 
 ### Task 2: Deploy highly-available Azure HANA instances by using Ansible
 
@@ -1150,9 +1150,9 @@ You will leverage a number of artifacts that you implemented in the first exerci
 
     > **Note**: If the deployment fails or does not complete within 75 minutes, terminate the deployment by pressing Ctrl+C, within the SSH session to the Azure VM you used to perform the Terraform deployment, run the following command to delete the resource group and resources created during the deployment, and then retry the deployment by re-running task 1 and 2 of this exercise.
 
-        ```sh
-        az group delete --name hanav2-ha-RG --yes
-        ```
+ ```sh
+ az group delete --name hanav-ha-RG --yes
+ ```
 
 ### Task 3: Review the deployment of highly-available HANA instances
 
