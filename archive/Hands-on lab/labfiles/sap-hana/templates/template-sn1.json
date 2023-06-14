@@ -3,7 +3,7 @@
     "region": "eastus",
     "resource_group": {
       "is_existing": "false",
-      "name": "hanav2-sn-RG"
+      "name": "hanav-sn-RG"
     },
     "ppg": {
       "is_existing": "false",
