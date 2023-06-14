@@ -87,25 +87,25 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
 1. In the **Azure Portal**, naviagte to **Resource Group**.
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/resource.png) 
+    ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/resource.png) 
 
 1. Select **hanav2-sn-RG** resource group.
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/rg.png) 
+    ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/rg.png) 
    
 1. On the overview page, copy the **Subscription ID** and **Location**, paste it in a text editor such as *Notepad*. 
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/copy-sub.png) 
+    ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/copy-sub.png) 
 
 1.  Next, from the **Azure Portal**, Click on **Cloud Shell**.
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/img-1.png) 
+    ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/img-1.png) 
 
 1.  If prompted, in the **Welcome to Azure Cloud Shell** window, select **Bash**.
 
 1.  If prompted, in the **You have no storage mounted** window, select **Create storage**.
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/create-storage.png) 
+    ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/create-storage.png) 
 
 1.  In the **Bash** session in the **Cloud Shell** pane, run the following to select the Azure subscription in which you will provision the Azure resources in this lab (replace the `[subscription_ID]` placeholder with the value of the subscriptionID parameter you copied earlier):
 
@@ -151,7 +151,7 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
     az vm show --show-details --resource-group $RGNAME --name $VMNAME --query publicIps -o tsv
     ```
 
-   ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/ip-conf.png) 
+     ![](images/Hands-onlabstep-by-step-SAPHANAonAzureimages/media/ip-conf.png) 
 
 1.  From your computer, click on Putty to start the SSH client and connect via SSH to the newly provisioned Azure VM via the public IP address you identified in the previous step. When prompted to sign in, authenticate by using the **azureadm** user account and the password you provided during provisioning.
 
