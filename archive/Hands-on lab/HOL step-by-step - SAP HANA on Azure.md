@@ -262,7 +262,7 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
 
     ```sh
     <!-- curl https://raw.githubusercontent.com/microsoft/MCW-SAP-HANA-on-Azure/master/Hands-on%20lab/labfiles/sap-hana/templates/template-sn1.json  --output ./deploy/v2/template_samples/template-sn1.json -->
-    curl https://raw.githubusercontent.com/polichtm/MCW-SAP-HANA-on-Azure/master/Hands-on%20lab/labfiles/sap-hana/templates/template-sn1.json  --output ./deploy/v2/template_samples/template-sn1.json
+    curl https://raw.githubusercontent.com/CloudLabs-MCW/MCW-SAP-HANA-on-Azure/master/archive/Hands-on%20lab/labfiles/sap-hana/templates/template-sn1.json  --output ./deploy/v2/template_samples/template-sn1.json
     ```
 
     > **Note**: The template has the following content:
@@ -273,7 +273,7 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
         "region": "eastus",
         "resource_group": {
           "is_existing": "false",
-          "name": "hanav2-sn-RG"
+          "name": "hanav-sn-RG"
         },
         "ppg": {
           "is_existing": "false",
