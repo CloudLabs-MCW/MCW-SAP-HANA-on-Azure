@@ -562,7 +562,7 @@ In this exercise, you will implement a single-node deployment of SAP HANA on Azu
     > **Note**: If the deployment fails or does not complete within 75 minutes, terminate the deployment by pressing Ctrl+C, within the SSH session to the Azure VM you used to perform the Terraform deployment, run the following command to delete the resource group and resources created during the deployment, and then retry the deployment by re-running task 2 and 3 of this exercise.
 
     ```sh
-    az group delete --name hanav2-sn-RG --yes
+    az group delete --name hanav-sn-RG --yes
     ```
 
 
